@@ -1,0 +1,55 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SDP Modifications
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%  Adding Title Modifications -- CMcGreavy 2019 %%%%%%%%%%%
+ 
+% Default Values for Making Title
+\def\groupNumber{X}
+\def\groupName{X}
+\def\productName{X}
+\def\studentName{X}
+\def\demoNumber{X}
+\def\logoFileName{figs/sdp_test_logo.png}
+ 
+% Commands for Editing Title Args - set these in the main document
+\newcommand\setGroupNumber[1]{\def\groupNumber{#1}}
+\newcommand\setGroupName[1]{\def\groupName{#1}}
+\newcommand\setProductName[1]{\def\productName{#1}}
+\newcommand\setDemoNumber[1]{\def\demoNumber{#1}}
+\newcommand\setStudentName[1]{\def\studentName{#1}}
+\newcommand\setLogoFileName[1]{\def\logoFileName{#1}}
+
+% Formatting as a Percentage of Page With
+% Sum of these 3 values should be <1
+\def\titleWidth{0.63}
+\def\leftBoxSize{0.18}
+\def\rightBoxSize{0.18}
+
+\newcommand\makeSDPTitle[1]{%
+    \lhead{Group Number: \groupNumber}
+    \if\demoNumber X 
+    \rhead{#1}
+    \else
+    \rhead{{#1}: \demoNumber}
+    \fi
+    \twocolumn[%
+        \raggedright
+        \begin{minipage}{\leftBoxSize\textwidth}
+            {\includegraphics[width=\textwidth]{\logoFileName}}
+        \end{minipage}
+        \begin{minipage}{\titleWidth\textwidth}
+            \centering
+                \Large{\textbf{Product: \productName}}\\
+                \large{\textbf{Team: \groupName}}    \\            
+                \if\studentName X 
+                \large{\textbf{ }} 
+                \else
+                \large{\textbf{Student: \studentName}}          
+                \fi
+        \end{minipage}
+        \raggedleft
+        \begin{minipage}{\rightBoxSize\textwidth}
+            {\includegraphics[width=\textwidth]{\logoFileName}}
+        \end{minipage}
+    ]
+}

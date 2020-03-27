@@ -1,0 +1,56 @@
+\begin{table*}[h]
+
+\centering
+\vskip 3mm
+\begin{center}
+\begin{small}
+\begin{sc}
+\hspace*{-0.6cm}\begin{tabular}{lcccr}
+\hline
+\abovespace\belowspace
+Task Name & Milestone (M)  & Estimated time & Dependency &  Rough description \\
+\hline
+\abovespace
+Web App  & Wireframe (M1)  & 6 Hours & - & describing the layout of the web app\\
+Web App  & Motor communication (M1)    & 6 Hours & Electrical  & establish web app - motor/sensor communication  \\
+Web App  & Web Server (M1)   & 2 Hours  & - & set up server to host the web app on the raspberry pi \\
+Electrical  & Pi + sensor setup (M1) & 5 Hours  & Mechanical & setup up pi and sensor for web app communication \\
+Electrical  & Motor setup 1 (M1)    & 20 Hours  & Mechanical & make motor move on Web App command \\
+Electrical  & Motor setup 2 (M1)    & 20 Hours  & Mechanical & attach motor to frame\\
+Mechanical  & Frame Building (M1)    & 25 Hours  & - & Cutting materials and building the frame  \\
+Mechanical & Gantry + Arm (M1)    & 30 Hours & - & Attaching gantry to frame and arm to gantry \\
+
+Web App & Storage (M2) & 10 Hours & - & setup data structure to store plant data \\
+Web App & Watering (M2) & 10 Hours & - & establish watering system - web app communication \\ 
+
+Electrical & 2D Movement (M2) & 10 Hours & Mechanical & code to make head move in x/y direction \\
+Electrical & Grid + Boundary (M2) & 6 Hours & Mechanical & grid based 2D movement with Boundaries \\
+Electrical & Picking (M2) & 10 Hours & Mechanical & make arm pick up seeds   \\
+Mechanical & Head Design (M2) & 15 Hours & - & designing and building movable head  \\
+Mechanical & Arm Design (M2) & 15 Hours & - & designing and building arm attached to head \\
+
+Web App & Watering Logic (M3) & 12 Hours & Mechanical & build the watering system timetable based on sensor \\
+Web App & Statistics (M3) & 9 Hours & - & add logging of actions and \newline advanced statistics to Web App \\
+
+Electrical & Sowing (M3) & 7 Hours & Mechanical & coding to make arm sow picked up seeds \\
+Electrical & Web App Communication (M3) & 2 Hours & Web App & actions callable by Web App Commands \\
+Electrical & Watering logic electrical (M3) & 7 Hours & Mechanical & how watering will be done \\
+Mechanical & Watering + Digging (M3) & 13 Hours & - & building watering and digging system \\
+Mechanical & Attachments (M3) & 12 Hours & - & add planting and watering + digging system to arm \\
+
+Web App & Growth Prediction (M4) & 12 Hours & - & growth prediction based on planted plant \\
+Web App & Notifications (M4) & 6 Hours & - & notification system for info the user needs to know \\ 
+Web App & General UI improvement (M4) & 6 Hours & - & making the UI robust and further improvements \\
+
+
+
+
+\belowspace
+\end{tabular}
+\end{sc}
+\end{small}
+\caption{Task decomposition for the system, where M1 through M4 correspond to Milestones 1 to 4.}
+\label{tab:atomic_tasks}
+\end{center}
+\vskip -3mm
+\end{table*}

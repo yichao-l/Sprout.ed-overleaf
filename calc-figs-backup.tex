@@ -1,0 +1,77 @@
+
+
+\documentclass{article}
+
+\input{mlp2018_includes}
+\usepackage{tikz}
+\usepackage[justification=centering]{caption}
+\usepackage{gensymb}
+
+\begin{document}
+
+
+
+\begin{figure}
+\centerline{\includegraphics[width=0.7\columnwidth]{figs-demo2/BASEGEARS.jpg}}
+
+\[ d_1=d_3=0.009 m, \;\; d_2=0.017 m, \;\; d_4=0.042 m  \]
+\[ T_1 = 0.2 Nm, \;\;\;\;  T_3=T_2 \;\;\; T_4 = \frac{T_3 d_3}{d_1} \]
+
+\[  T_4 = \frac{T_1 d_2 d_4}{d_1 d_3} = \frac{T_1 d_2 d_4}{d_1^2} \approx 1.763 \; T_1\]
+\[ F_t = \frac{2 T_4}{d_4} = \frac{2 T_1 d_2}{d_1^2} \approx 83.951 N \]
+\[ F_f = \mu N = 0.005 * 4.521 kg * 9.8 m/s^2 = 0.2215 N \]
+
+\caption{Workings for tangential force and torque ratio of the base movement (horizontal) \(T\) - torque, \(F_t\) - tangential force}
+\label{fig:base-formula}
+\end{figure}
+
+
+\begin{figure}
+\includegraphics[width=1\columnwidth]{figs-demo2/ARMGEARS.jpg}
+
+\[ d_1=0.017 m, \;\; d_2=0.042 m, \;\; d_3=0.009 m  \]
+\[ T_1 = 0.08 Nm, \;\;\;\; T_3=T_2=\frac{T_1 d_2}{d_1} \]
+
+
+\[  T_3 = \frac{d_2}{d_1}T_1 \approx 2.471T_1\]
+\[ F_t = \frac{2 T_3}{d_3} = \frac{2 T_1 d_2}{d_1 d_3} = \frac{2*0.08*0.042}{0.009*0.017} \approx 43.922 \; N \]
+\[ F_f = \mu N = 0.06 * 0.1 kg * 9.8 m/s^2 = 0.059 N \]
+
+
+\caption{Workings for tangential force and torque ratio of the arm movement (horizontal) \(T\) - torque, \(F_t\) - tangential force}
+\label{fig:arm-formula}
+\end{figure}
+
+
+\begin{figure}[h]
+
+\centerline{\includegraphics[width=1\columnwidth]{figs-demo2/HEADGEARS.jpg}}
+
+\[ d_3=d_1=0.017 m, \;\; d_4=d_2=0.042 m, \;\; d_5=0.025 m  \]
+\[ T_1 = 0.08 Nm, \;\;\;\; T_3=T_2, \;\;\;\; T_5=T_4 \]
+\[ T_4 = \frac{T_3d_4}{d_3} \;\; T_2 = \frac{T_1 d_2}{d_1} \;\; F_t = \frac{2T_5}{d_5} \]
+
+\[ T_5 = \frac{T_3 d_4}{d_3} = \frac{T_2 d_4}{d_3} = \frac{T_1 d_2 d_4}{d_1 d_3} = \frac{T_1 d_2^2}{d_1^2} \]
+
+\[ T_5 = \frac{d_2^2}{d_1^2}T_1 \approx 6.104 T_1 \]
+
+\[ F_t = \frac{2T_5}{d_5} = \frac{2 T_1 d_2^2}{d_5 d_1^2} \approx 39.06 \; N \]
+\[ F_f = \mu N = 0.05 * 0.35 kg * 9.8 m/s^2 = 0.171 N \]
+
+
+\caption{Workings for tangential force and torque ratio of the head movement (horizontal) \(T\) - torque, \(F_t\) - tangential force}
+\label{fig:head-formula}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
