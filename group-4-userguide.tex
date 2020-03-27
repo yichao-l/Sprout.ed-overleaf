@@ -1,3 +1,4 @@
+%testest for the git functionality
 %% Template for SDP report, adapted from mlp_cw2_template, 2018. 
 % test test from github
 %% Based on  LaTeX template for ICML 2017 - example_paper.tex at 
@@ -58,11 +59,19 @@ The rest of the document is structured as follows to provide a comprehensive gui
     \label{fig:the-robot}
 \end{figure}
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{figs-userguide/interfacePlaceholder.png}
+    \caption{Interface layout.}
+    \label{fig:the-interface}
+\end{figure}
+
 \subsection{Hardware}
 See Figure \ref{fig:the-robot} for a labelled diagram of how all the components fit together.
 
 \subsection{Electrical}
-Sprout.ed's electrical system comprises of a combination of an EV3 and a Raspberry Pi. The EV3 is used for the movement of the gantry and the arm, while the Pi controls the movement of the claw, drop and pickup of seeds, and the 
+Sprout.ed's electrical system comprises of a combination of an EV3 and a Raspberry Pi. The EV3 is used for the movement of the gantry and the arm, while the Pi controls the movement of the claw, drop and pickup of seeds, and the watering process. For gantry & arm movement, we used 4 EV3 motors (3 large, 1 small), and 3 Pi servos. To ensure that the gantry or arm do not run over causing a hardware malfunction, we employed touch sensors on either ends of the rails and gantry to detect the extremities of movement. For the watering process, we used Mosit 
+
 \subsection{Web Application}
 The robot is accompanied by a web application hosted on the Raspberry Pi, which allows for remote monitoring of the plant bed. The app has a User Mode and an Admin Mode. The User Mode can be accessed by any of the office employees, allowing them to see which plants are currently planted, information about them, and a current photograph of the plant. The Admin Mode is designed for office managers, and requires a log in. This Mode additionally allows you to select a new plant type and location to add to the plant bed, check temperature and moisture readings, view actions performed on or by the system, and allows for a manual override watering function.
 TODO: Insert screenshot of web app user homepage?
